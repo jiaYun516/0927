@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from blog1.views import homepage,showpost
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',homepage,name='homepage'),
+    path('post/<slug:slug>/',showpost,name='showpost')
 ]

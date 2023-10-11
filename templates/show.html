@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 15px;
+    }
+    .btn{
+        padding: 5px 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        transition: color ease-in 0.2s
+                    ,background-color ease-in 0.2s;
+    }
+    .btn:hover{
+        background-color: gray;
+        color: black; 
+    }
+</style>
+<body>
+    <a href="/", class="btn">back</a>
+    <h1>{{post.title}}</h1>
+    <p>{{post.pub_date}}</p>
+    <hr>
+    <p>{{post.body}}</p>
+</body>
+</html>

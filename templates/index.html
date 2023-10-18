@@ -1,38 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11056012</title>
-</head>
-<style>
-    td{
-        font-size: 15px;
-        padding: 5px 12px;
-        font-weight: bold;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    a{
-        text-decoration: none;
-        color: blue;
-    }
-    p{
-        background-color: black;
-        color: white;
-        padding: 10px 5px;
-    }
-</style>
-<body>
-    <h1>歡迎</h1>
-    <table>
-        {% for post in posts %}
-        <tr>
-            <td style="padding: 0px 10px;">{{post.id}}</td>
-            <td style=""><a href='/post/{{post.slug}}'>{{post.title}}</a></td>
-            <td>{{post.pub_date}}</td>
-        </tr>
-        {% endfor %}
-    </table>
-        <p>nowTime:{{ now }}</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}歡迎光臨我的部落格{% endblock title%}
+{% block headmessge %}<h1 style="font-family:微軟正黑體;font-size:20px">歡迎，本站文章列表</h1>{% endblock headmessge %}
+{% block content %}
+<table>
+    {% for post in posts %}
+    <tr>
+        <td style="padding: 0px 5px;">{{post.id}}</td>
+        <td style="padding:0 10px"><a href='/post/{{post.slug}}' style="text-decoration-line: none;">{{post.title}}</a></td>
+        <td>{{post.pub_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

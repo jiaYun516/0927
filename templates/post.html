@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}{{post.title}}{% endblock title%}
+{% block headmessge %}
+<div class="title">
+    <h1 style="font-size:24px;">{{post.title}}</h1>
+    <a href="/", class="btn">back</a>
+</div>
+
+<p>{{post.pub_date}}</p>
+{% endblock headmessge %}
+{% block content %}
+    <p>{{post.body}}</p>
+{% endblock content %}

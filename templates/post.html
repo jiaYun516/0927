@@ -8,5 +8,5 @@
 <p>{{post.pub_date}}</p>
 {% endblock %}
 {% block content %}
-    <p>{{post.body}}</p>
+    <p>{{post.body  | safe}}</p>
 {% endblock content %}
